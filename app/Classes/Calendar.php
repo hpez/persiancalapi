@@ -6,8 +6,6 @@ use Morilog\Jalali\CalendarUtils;
 class Calendar{
 	public  function getEvents($date){
 		$date=date("Y-m-d",strtotime($date));
-		if(date("D",strtotime($date))=="Fri")
-			return true;
 		$timestamp=strtotime($date);
 		list($year,$month,$day)=CalendarUtils::toJalali(date("Y",$timestamp), date("m",$timestamp),date("d",$timestamp));		
 		
@@ -25,15 +23,16 @@ class Calendar{
 
 		$xpath = new \DomXPath($doc);
 		$elements = $xpath->query("//*[@class='list-unstyled']//li");
-		
-		if((int)($elements->length==0)){
-			return [
-				'isHoliday'=>false,
-				'events'=>null
+		$isHoliday=false;
+		$events=[];
+		if(date("w",$timestamp)==5){
+			$isHoliday=true;
+			$events[]=[
+				'description'=>'جمعه',
+				'additionalDescription'=>'',
+				'isReligious'=>false
 			];
 		}
-		$isHoliday=false;
-		
 		foreach($elements as $element){			
 			$childs = $element->getElementsByTagName("span");
 			$date=$childs->item(0)->nodeValue;
