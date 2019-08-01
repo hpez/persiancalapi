@@ -4,10 +4,8 @@
 namespace App\Http\Controllers;
 
 
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Log;
+use App\Classes\Calendar;
 use Morilog\Jalali\CalendarUtils;
-use \App\Classes;
 
 class HolidayController extends Controller
 {
@@ -17,7 +15,7 @@ class HolidayController extends Controller
             list($y,$m,$d) = CalendarUtils::toGregorian($y, $m, $d);
         }
 		$date="$y-$m-$d";
-		$calendar = new \App\Classes\Calendar;
+		$calendar = new Calendar;
 		$events = $calendar->getEvents($date);
 		return $events;
     }
