@@ -34,8 +34,8 @@ class Calendar
         $isHoliday=true;
         $events[]=[
           'description'=>'جمعه',
-          'additionalDescription'=>'',
-          'isReligious'=>false
+          'additional_description'=>'',
+          'is_religious'=>false
         ];
       }
       foreach($elements as $element){			
@@ -49,12 +49,12 @@ class Calendar
 
         $events[]=[
           'description'=>trim($description),
-          'additionalDescription'=>trim(preg_replace("/\[|\]/", "", $additionalDescription)),
-          'isReligious'=>(trim($childs->item(1)->nodeValue)!="" and $childs->item(1)->getElementsByTagName("span")->length==0)
+          'additional_description'=>trim(preg_replace("/\[|\]/", "", $additionalDescription)),
+          'is_religious'=>(trim($childs->item(1)->nodeValue)!="" and $childs->item(1)->getElementsByTagName("span")->length==0)
         ];
       }
       return [
-        'isHoliday'=>(bool)$isHoliday,
+        'is_holiday'=>(bool)$isHoliday,
         'events'=>$events
       ];
     }	
