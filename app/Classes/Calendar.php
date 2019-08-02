@@ -26,37 +26,36 @@ class Calendar
         $doc = new DomDocument();
         @$doc->loadHTML('<?xml encoding="UTF-8">' . $response);
         $doc->preserveWhiteSpace = false;
-
-        $xpath = new DomXPath($doc);
-        $elements = $xpath->query("//*[@class='list-unstyled']//li");
-        $isHoliday = false;
-        $events = [];
-        if (date("w", $timestamp) == 5) {
-            $isHoliday = true;
-            $events[] = [
-                'description' => 'جمعه',
-                'additional_description' => '',
-                'is_religious' => false
-            ];
-        }
-        foreach ($elements as $element) {
-            $childs = $element->getElementsByTagName("span");
-            $date = $childs->item(0)->nodeValue;
-            $additionalDescription = $childs->item(1)->nodeValue;
-            $description = str_replace($additionalDescription, "", $element->nodeValue);
-            $description = str_replace($date, "", $description);
-            $isHoliday |= ($element->hasAttribute("class") and strstr($element->getAttribute('class'), 'eventHoliday'));
-            $events[] = [
-                'description' => trim($description),
-                'additional_description' => trim(preg_replace("/\[|\]/", "", $additionalDescription)),
-                'is_religious' => (trim($childs->item(1)->nodeValue) != "" and !$childs->item(1)->hasAttribute("dir"))
-            ];
-        }
-        return [
-            'is_holiday' => (bool)$isHoliday,
-            'events' => $events
+      $xpath = new \DomXPath($doc);
+      $elements = $xpath->query("//*[@class='list-unstyled']//li");
+      $isHoliday=false;
+      $events=[];
+      if(date("w",$timestamp)==5){
+        $isHoliday=true;
+        $events[]=[
+          'description'=>'جمعه',
+          'additionalDescription'=>'',
+          'isReligious'=>false
         ];
+      }
+      foreach($elements as $element){			
+        $childs = $element->getElementsByTagName("span");
+        $date=$childs->item(0)->nodeValue;
+        $additionalDescription=$childs->item(1)->nodeValue;
+        $description=str_replace($additionalDescription,"",$element->nodeValue);
+        $description=str_replace($date,"",$description);
+        $isHoliday|=($element->hasAttribute("class") and strstr($element->getAttribute('class'), 'eventHoliday'));
 
-    }
 
+        $events[]=[
+          'description'=>trim($description),
+          'additionalDescription'=>trim(preg_replace("/\[|\]/", "", $additionalDescription)),
+          'isReligious'=>(trim($childs->item(1)->nodeValue)!="" and $childs->item(1)->getElementsByTagName("span")->length==0)
+        ];
+      }
+      return [
+        'isHoliday'=>(bool)$isHoliday,
+        'events'=>$events
+      ];
+    }	
 }
