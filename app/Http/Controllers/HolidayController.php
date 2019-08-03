@@ -12,11 +12,11 @@ class HolidayController extends Controller
     public function index($type, $y, $m, $d)
     {
         if ($type == 'jalali') {
-            list($y,$m,$d) = CalendarUtils::toGregorian($y, $m, $d);
+            list($y, $m, $d) = CalendarUtils::toGregorian($y, $m, $d);
         }
-		$date="$y-$m-$d";
-		$calendar = new Calendar;
-		$events = $calendar->getEvents($date);
-		return $events;
+        $date = "$y-$m-$d";
+        $calendar = new Calendar;
+        $events = $calendar->getEvents($date);
+        return $events;
     }
 }
