@@ -15,7 +15,11 @@ class Calendar
         $timestamp = strtotime($date);
         list($year, $month, $day) = CalendarUtils::toJalali(date("Y", $timestamp), date("m", $timestamp), date("d", $timestamp));
 
-        $url = "http://www.time.ir/fa/event/list/0/$year/$month/$day";
+        if (env('APP_ENV') == 'testing')
+            $url = "https://www.persiancalapi.ir/proxy/$year/$month/$day";
+        else
+            $url = "http://www.time.ir/fa/event/list/0/$year/$month/$day";
+        
         $client = new Client(
             array(
                 'curl' => array(CURLOPT_SSL_VERIFYPEER => false),
