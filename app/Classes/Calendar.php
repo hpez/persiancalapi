@@ -48,13 +48,15 @@ class Calendar
             $additionalDescription = $childs->item(1)->nodeValue;
             $description = str_replace($additionalDescription, "", $element->nodeValue);
             $description = str_replace($date, "", $description);
-            $isHoliday |= ($element->hasAttribute("class") and strstr($element->getAttribute('class'), 'eventHoliday'));
+            $isHoliday |= ($element->hasAttribute("class") && strstr($element->getAttribute('class'), 'eventHoliday'));
 
 
             $events[] = [
                 'description' => trim($description),
                 'additional_description' => trim(preg_replace("/\[|\]/", "", $additionalDescription)),
-                'is_religious' => (trim($childs->item(1)->nodeValue) != "" and $childs->item(1)->getElementsByTagName("span")->length == 0)
+                'is_religious' => (trim($childs->item(1)->nodeValue) != "" &&
+                    $childs->item(1)->getElementsByTagName("span")->length == 0 &&
+                    !preg_match('/(.*)[a-z]+(.*)/',trim($childs->item(1)->nodeValue)))
             ];
         }
         return [

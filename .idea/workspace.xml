@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdad0130-b316-45c9-a181-380eb957507c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/DetectsReligious.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Classes/Calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Classes/Calendar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HolidayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HolidayController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,23 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HolidayController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-              <folding>
-                <element signature="e#42#67#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Classes/Calendar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="359">
+              <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
               <folding>
                 <element signature="e#31#47#0#PHP" expanded="true" />
               </folding>
@@ -55,8 +46,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/BasicTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="180">
+              <caret line="12" column="63" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/DetectsReligious.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="77" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -128,12 +128,13 @@
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/tests/BasicTest.php" />
         <option value="$PROJECT_DIR$/phpunit.xml" />
-        <option value="$PROJECT_DIR$/app/Classes/Calendar.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HolidayController.php" />
+        <option value="$PROJECT_DIR$/app/Classes/Calendar.php" />
+        <option value="$PROJECT_DIR$/tests/DetectsReligious.php" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/vendor/opis/closure" />
@@ -318,11 +319,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.DetectsReligious">
+    <configuration name="DetectsReligious" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\DetectsReligious" file="$PROJECT_DIR$/tests/DetectsReligious.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DetectsReligious.testSimpleIsReligious" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\DetectsReligious" file="$PROJECT_DIR$/tests/DetectsReligious.php" method="testSimpleIsReligious" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.DetectsReligious" />
+        <item itemvalue="PHPUnit.DetectsReligious.testSimpleIsReligious" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -346,24 +361,54 @@
       <workItem from="1564665443142" duration="18000" />
       <workItem from="1564761140351" duration="108000" />
       <workItem from="1564765077321" duration="1991000" />
-      <workItem from="1564852098563" duration="4390000" />
+      <workItem from="1564852098563" duration="4936000" />
+      <workItem from="1565453736097" duration="1225000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="DetectsReligious_testSimpleIsReligious - 2019.08.10 at 21h 01m 46s.xml">
+      <configuration name="DetectsReligious.testSimpleIsReligious" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DetectsReligious_testSimpleIsReligious - 2019.08.10 at 21h 02m 55s.xml">
+      <configuration name="DetectsReligious.testSimpleIsReligious" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DetectsReligious_testSimpleIsReligious - 2019.08.10 at 21h 03m 40s.xml">
+      <configuration name="DetectsReligious.testSimpleIsReligious" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DetectsReligious_testSimpleIsReligious - 2019.08.10 at 21h 03m 50s.xml">
+      <configuration name="DetectsReligious.testSimpleIsReligious" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DetectsReligious_testSimpleIsReligious - 2019.08.10 at 21h 04m 02s.xml">
+      <configuration name="DetectsReligious.testSimpleIsReligious" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DetectsReligious_testSimpleIsReligious - 2019.08.10 at 21h 04m 17s.xml">
+      <configuration name="DetectsReligious.testSimpleIsReligious" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DetectsReligious_testSimpleIsReligious - 2019.08.10 at 21h 04m 32s.xml">
+      <configuration name="DetectsReligious.testSimpleIsReligious" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DetectsReligious_testSimpleIsReligious - 2019.08.10 at 21h 04m 49s.xml">
+      <configuration name="DetectsReligious.testSimpleIsReligious" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DetectsReligious_testSimpleIsReligious - 2019.08.10 at 21h 05m 10s.xml">
+      <configuration name="DetectsReligious.testSimpleIsReligious" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19420000" />
+    <option name="totallyTimeSpent" value="21191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29717764" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2899834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -418,44 +463,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CreatesApplication.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HolidayController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="270">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="e#42#67#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/BasicTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -466,23 +487,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CreatesApplication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/BasicTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="63" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Classes/Calendar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state relative-caret-position="359">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
           <folding>
             <element signature="e#31#47#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HolidayController.php">
+    <entry file="file://$PROJECT_DIR$/tests/DetectsReligious.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="e#42#67#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="19" column="77" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
         </state>
       </provider>
     </entry>
