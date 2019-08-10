@@ -56,7 +56,7 @@ class Calendar
                 'additional_description' => trim(preg_replace("/\[|\]/", "", $additionalDescription)),
                 'is_religious' => (trim($childs->item(1)->nodeValue) != "" &&
                     $childs->item(1)->getElementsByTagName("span")->length == 0 &&
-                    !preg_match('(.*)[a-z]+(.*)',trim($childs->item(1)->nodeValue)))
+                    !preg_match('/(.*)[a-z]+(.*)/',trim($childs->item(1)->nodeValue)))
             ];
         }
         return [
